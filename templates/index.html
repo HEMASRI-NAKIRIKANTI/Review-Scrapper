@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h2 style="color:black;">Enter Products to Search</h2>
+    <div class="form">
+        <form action="/scrap" method="POST">
+            <input type="text" name="content" id="content" placeholder="Please enter the item" style="border-radius: 5px;height:20px">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+{% endblock %}
